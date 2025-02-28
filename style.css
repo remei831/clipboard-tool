@@ -1,6 +1,6 @@
-body {
+﻿body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #e0ecff; /* 淡藍色背景 */
     text-align: center;
     padding: 20px;
 }
@@ -10,16 +10,17 @@ body {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
+    color: #2a4d8f; /* 深藍色標題 */
 }
 
-/* �s�ի��s */
+/* 群組按鈕 */
 .group {
     margin-bottom: 10px;
 }
 
 .group-btn {
     width: 100%;
-    background-color: #345c46; /* �`��� */
+    background-color: #2a4d8f; /* 深藍色 */
     color: white;
     font-size: 18px;
     text-align: left;
@@ -29,30 +30,58 @@ body {
     display: block;
 }
 
-/* ���e�϶� */
+/* 群組內容展開區域 */
 .content {
+    background-color: #c6d9f7; /* 群組展開底色（淡藍） */
     padding: 10px;
+    border-radius: 5px;
     text-align: left;
+    margin-top: 5px;
 }
 
-/* ��J�� */
+/* 可複製的文字區域 */
+.copy-text {
+    background-color: #4b74b9; /* 文字區域底色（比主色淺的藍） */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 刪除按鈕（清除） */
+.delete-btn {
+    background-color: #2a4d8f; /* 深藍 */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 🎯 修正輸入框寬度，對齊群組按鈕 */
 #customInput,
 #textArea {
-    width: 100%;
+    width: calc(100% - 24px); /* 讓輸入框跟 group-btn 同寬 */
+    max-width: 100%; /* 防止過寬 */
     padding: 12px;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: none;
     border-radius: 5px;
     background-color: white;
     margin-bottom: 10px;
 }
 
-/* ��J���ܤj */
+/* 讓 textarea 更高 */
 #textArea {
-    height: 80px; /* 1.5 �� */
+    height: 80px;
 }
 
-/* ��ܻP���s�� */
+/* 🎯 讓選擇欄位與新增按鈕對齊 */
 .input-group {
     display: flex;
     justify-content: space-between;
@@ -67,23 +96,23 @@ body {
     width: 100%;
     padding: 12px;
     border: none;
-    background-color: #d1d1d1;
+    background-color: #c6d9f7; /* 淡藍色 */
     font-size: 16px;
     border-radius: 5px;
 }
 
-/* �s�W���s */
+/* 🎯 修正新增按鈕寬度 */
 #addCustom {
-    background-color: #345c46; /* �`��� */
+    width: 48%; /* 讓寬度跟複製&清除按鈕一致 */
+    background-color: #2a4d8f; /* 深藍 */
     color: white;
     border: none;
     padding: 12px;
-    margin-left: 10px;
     font-size: 16px;
     border-radius: 5px;
 }
 
-/* ���s�� */
+/* 按鈕區 */
 .buttons {
     display: flex;
     justify-content: space-between;
@@ -92,7 +121,7 @@ body {
 
 .btn-left, .btn-right {
     width: 48%;
-    background-color: #345c46; /* �`��� */
+    background-color: #2a4d8f; /* 深藍 */
     color: white;
     border: none;
     padding: 12px;
