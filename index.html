@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>剪貼簿小幫手</title>
+    <title>剪貼簿小幫手</title>   
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>喵喵我我小幫手</h1>
+    <h1 class="title">喵喵我我小幫手</h1>
 
     <!-- 群組區域 -->
     <div class="group">
@@ -33,21 +33,26 @@
 
     <!-- 自定義輸入 -->
     <input type="text" id="customInput" placeholder="輸入要新增的內容">
-    <select id="groupSelect">
-        <option value="basic-settings">📋 基本設定</option>
-        <option value="character-actions">🎭 角色行為</option>
-        <option value="car-scenes">🚗 開車</option>
-        <option value="custom-options">📄 自定義選項</option>
-    </select>
-    <button id="addCustom">新增</button>
+    
+    <div class="input-group">
+        <div class="select-container">
+            <select id="groupSelect">
+                <option value="basic-settings">📋 基本設定</option>
+                <option value="character-actions">🎭 角色行為</option>
+                <option value="car-scenes">🚗 開車</option>
+                <option value="custom-options">📄 自定義選項</option>
+            </select>
+        </div>
+        <button id="addCustom">新增</button>
+    </div>
 
     <!-- 文字框區域 -->
     <textarea id="textArea" placeholder="選擇上方選項或輸入文字..."></textarea>
 
     <!-- 按鈕區域 -->
     <div class="buttons">
-        <button onclick="copyText()">📋 複製內容</button>
-        <button onclick="clearText()">🗑 清除</button>
+        <button class="btn-left" onclick="copyText()">📋 複製內容</button>
+        <button class="btn-right" onclick="clearText()">清除</button>
     </div>
 
     <script src="script.js"></script>

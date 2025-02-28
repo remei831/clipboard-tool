@@ -1,54 +1,102 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
     text-align: center;
-    background-color: #f5f5f5;
     padding: 20px;
 }
 
+.title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* 群組按鈕 */
 .group {
     margin-bottom: 10px;
 }
 
 .group-btn {
-    width: 90%;
-    padding: 10px;
+    width: 100%;
+    background-color: #345c46; /* 深綠色 */
+    color: white;
     font-size: 18px;
-    background-color: #5b6e5e;
-    color: white;
+    text-align: left;
+    padding: 12px;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
-}
-
-.content {
-    display: none;
-    margin-top: 5px;
-    padding: 10px;
-}
-
-.option-btn {
     display: block;
-    margin: 5px auto;
-    padding: 10px;
-    width: 90%;
-    background-color: #dcdcdc;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    position: relative;
 }
 
-/* 刪除按鈕 */
-.delete-btn {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: red;
+/* 內容區塊 */
+.content {
+    padding: 10px;
+    text-align: left;
+}
+
+/* 輸入框 */
+#customInput,
+#textArea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+/* 輸入框變大 */
+#textArea {
+    height: 80px; /* 1.5 倍 */
+}
+
+/* 選擇與按鈕區 */
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.select-container {
+    flex-grow: 1;
+}
+
+#groupSelect {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #d1d1d1;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+/* 新增按鈕 */
+#addCustom {
+    background-color: #345c46; /* 深綠色 */
     color: white;
     border: none;
-    padding: 5px;
-    cursor: pointer;
+    padding: 12px;
+    margin-left: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+/* 按鈕區 */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.btn-left, .btn-right {
+    width: 48%;
+    background-color: #345c46; /* 深綠色 */
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
     border-radius: 5px;
 }
 
