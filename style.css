@@ -128,4 +128,10 @@
     font-size: 16px;
     border-radius: 5px;
 }
+select {
+    width: 100%; /* 讓它跟輸入框、按鈕統一寬度 */
+    box-sizing: border-box; /* 讓 padding 和 border 不影響總寬度 */
+    padding: 10px; /* 內邊距跟輸入框一樣 */
+    border: none; /* 移除邊框，讓樣式統一 */
+}
 
