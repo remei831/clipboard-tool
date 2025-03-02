@@ -31,24 +31,26 @@ function clearText() {
     document.getElementById("textArea").value = "";
 }
 
-// 新增自定義選項
+// 新增自定義選項（確保格式跟「基本設定範例」一致）
 document.getElementById("addCustom").addEventListener("click", function() {
     let input = document.getElementById("customInput").value.trim();
     let group = document.getElementById("groupSelect").value;
     if (input === "") return;
 
-    let newButton = document.createElement("button");
-    newButton.classList.add("option-btn");
-    newButton.textContent = input;
-    newButton.setAttribute("data-content", input);
-    newButton.style.position = "relative"; // 讓刪除按鈕對齊
+    let newItem = document.createElement("div"); 
+    newItem.classList.add("copy-text"); // ✅ 確保樣式一致
+    newItem.textContent = input;
 
     // 刪除按鈕
     let deleteBtn = document.createElement("button");
     deleteBtn.classList.add("delete-btn");
-    deleteBtn.textContent = "❌";
-    newButton.appendChild(deleteBtn);
+    deleteBtn.textContent = "清除";
+    deleteBtn.addEventListener("click", function () {
+        newItem.remove();
+    });
 
-    document.getElementById(group).appendChild(newButton);
+    newItem.appendChild(deleteBtn);
+    document.getElementById(group).appendChild(newItem);
+
     document.getElementById("customInput").value = "";
 });
